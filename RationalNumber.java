@@ -69,5 +69,9 @@ public class RationalNumber extends RealNumber {
     return z;
   }
 
-
+  public RationalNumber subtract(RationalNumber other) {
+    RationalNumber z = new RationalNumber(((numerator * other.getDenominator()) - (other.getNumerator() * denominator)), (denominator * getDenominator()));
+    z.reduce();
+    return z;
+  }
 }
