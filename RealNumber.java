@@ -23,4 +23,8 @@ public class RealNumber{
   public RealNumber add(RealNumber other){
     return new RealNumber(getValue() + other.getValue());
  }
+
+ public RealNumber multiply(RealNumber other){
+   return new RealNumber(getValue() * other.getValue());
+}
 }
