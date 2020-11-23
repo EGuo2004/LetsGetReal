@@ -50,4 +50,10 @@ public class RationalNumber extends RealNumber {
     numerator = numerator/x;
     denominator = denominator/x;
   }
+
+  public RationalNumber multiply(RationalNumber other) {
+    RationalNumber x = new RationalNumber(numerator * other.getNumerator(), denominator * other.getDenominator());
+    x.reduce();
+    return x;
+  }
 }
