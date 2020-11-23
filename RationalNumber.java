@@ -62,4 +62,12 @@ public class RationalNumber extends RealNumber {
     x.reduce();
     return x;
   }
+
+  public RationalNumber add(RationalNumber other) {
+    RationalNumber z = new RationalNumber(((numerator * other.getDenominator()) + (other.getNumerator() * denominator)), (denominator * getDenominator()));
+    z.reduce();
+    return z;
+  }
+
+
 }
