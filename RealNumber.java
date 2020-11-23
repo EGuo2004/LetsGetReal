@@ -19,4 +19,8 @@ public class RealNumber{
     }
     return Math.abs((getValue()-other.getValue())/other.getValue()) < 0.00001;
   }
+
+  public RealNumber add(RealNumber other){
+    return new RealNumber(getValue() + other.getValue());
+ }
 }
