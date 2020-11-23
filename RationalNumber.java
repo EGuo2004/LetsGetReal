@@ -31,7 +31,7 @@ public class RationalNumber extends RealNumber {
     return numerator + "/" + denominator;
   }
 
-  public static int gcd(int a, int b) {
+  private static int gcd(int a, int b) {
     int x = Math.max(a,b);
     int y = Math.min(a,b);
     int remainder;
@@ -43,5 +43,11 @@ public class RationalNumber extends RealNumber {
       }
     }
     return y;
+  }
+
+  private void reduce() {
+    int x = gcd(numerator, denominator);
+    numerator = numerator/x;
+    denominator = denominator/x;
   }
 }
