@@ -5,6 +5,14 @@ public class RationalNumber extends RealNumber {
     super(nume/deno);
     numerator = nume;
     denominator = deno;
+    if (deno == 0) {
+      numerator = 0;
+      denominator = 1;
+    }
+    if (deno < 0) {
+      numerator = numerator * -1;
+      denominator = denominator * -1;
+    }
   }
 
   public double getValue() {
@@ -49,6 +57,10 @@ public class RationalNumber extends RealNumber {
     int x = gcd(numerator, denominator);
     numerator = numerator/x;
     denominator = denominator/x;
+    if (denominator < 0) {
+      numerator = numerator * -1;
+      denominator = denominator * -1;
+    }
   }
 
   public RationalNumber multiply(RationalNumber other) {
